@@ -1,0 +1,139 @@
+/*
+  Central de Mensagens · design system (a fonte dos tokens)
+
+  Para quem é: uma pessoa só, triando o que dezenas de sessões prepararam. Usa de madrugada e de dia,
+  no computador e no celular. O trabalho é decidir rápido e sem medo: a mensagem aparece como quem recebe vai ver.
+  Voz: decidida, calorosa, mecânica (balcão de triagem de correio, não painel de SaaS).
+
+  Tipografia: Overpass (herdeira da sinalização de estrada: clara, firme, sem enfeite) para a interface,
+  Overpass Mono para ids, atalhos e caminhos, Big Shoulders Display só para números grandes
+  (contagem regressiva, relatório). As prévias usam a fonte de cada aplicativo.
+
+  Cor: neutros levemente puxados para o azul-ultramar da marca (hue 266). Um acento só, usado para
+  foco, seleção, ação principal e a janela de desfazer. Vermelho bloqueia, âmbar avisa, verde é entregue.
+  As cores de canal aparecem só nos ícones e dentro das prévias.
+
+  Raio: painel 12, item e cartão 10, botão e campo 8, etiqueta 999, tecla 5. Prévias seguem o app.
+*/
+
+:root {
+  color-scheme: light dark;
+
+  /* superfícies */
+  --bg: light-dark(oklch(0.972 0.004 266), oklch(0.17 0.009 266));
+  --bg-sunk: light-dark(oklch(0.948 0.007 266), oklch(0.145 0.009 266));
+  --surface: light-dark(oklch(0.993 0.002 266), oklch(0.205 0.011 266));
+  --surface-2: light-dark(oklch(0.962 0.006 266), oklch(0.238 0.012 266));
+  --surface-3: light-dark(oklch(0.93 0.009 266), oklch(0.275 0.013 266));
+  --line: light-dark(oklch(0.905 0.008 266), oklch(0.29 0.013 266));
+  --line-strong: light-dark(oklch(0.84 0.011 266), oklch(0.37 0.015 266));
+  /* borda de campo, caixa de marcar e opção clicável: 3:1 contra a superfície (WCAG 1.4.11) */
+  --line-campo: light-dark(oklch(0.62 0.012 266), oklch(0.52 0.014 266));
+
+  /* texto */
+  --text: light-dark(oklch(0.235 0.016 266), oklch(0.94 0.006 266));
+  --text-2: light-dark(oklch(0.43 0.016 266), oklch(0.775 0.012 266));
+  --text-3: light-dark(oklch(0.515 0.014 266), oklch(0.66 0.013 266));
+
+  /* acento: azul-ultramar */
+  --accent: light-dark(oklch(0.49 0.2 266), oklch(0.72 0.14 268));
+  --accent-hover: light-dark(oklch(0.44 0.2 266), oklch(0.78 0.12 268));
+  --accent-fg: light-dark(oklch(0.985 0.006 266), oklch(0.17 0.03 268));
+  --accent-soft: light-dark(oklch(0.952 0.028 266), oklch(0.285 0.055 268));
+  --accent-line: light-dark(oklch(0.8 0.08 266), oklch(0.47 0.1 268));
+  --accent-text: light-dark(oklch(0.46 0.19 266), oklch(0.8 0.11 268));
+
+  /* estados */
+  --danger: light-dark(oklch(0.52 0.19 27), oklch(0.74 0.15 25));
+  --danger-soft: light-dark(oklch(0.962 0.024 27), oklch(0.27 0.055 25));
+  --danger-line: light-dark(oklch(0.84 0.07 27), oklch(0.44 0.1 25));
+  --warn: light-dark(oklch(0.5 0.11 62), oklch(0.84 0.12 80));
+  --warn-icon: light-dark(oklch(0.62 0.15 66), oklch(0.82 0.14 78));
+  --warn-soft: light-dark(oklch(0.968 0.038 85), oklch(0.27 0.045 75));
+  --warn-line: light-dark(oklch(0.86 0.09 82), oklch(0.44 0.08 75));
+  --ok: light-dark(oklch(0.5 0.13 155), oklch(0.79 0.14 155));
+  --ok-soft: light-dark(oklch(0.962 0.03 155), oklch(0.26 0.045 155));
+  --ok-line: light-dark(oklch(0.83 0.08 155), oklch(0.42 0.08 155));
+
+  /* canais (só ícones e prévias) */
+  --c-whatsapp: light-dark(oklch(0.6 0.16 150), #25d366);
+  --c-email: #ea4335;
+  --c-discord: #5865f2;
+
+  /* tipografia */
+  --fonte-ui: 'Ponto do meio', 'Overpass Variable', 'Overpass', ui-sans-serif, system-ui, sans-serif;
+  --fonte-mono: 'Overpass Mono Variable', 'Overpass Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --fonte-num: 'Big Shoulders Display Variable', 'Overpass Variable', sans-serif;
+  --t-meta: 0.78rem;   /* 12.5 */
+  --t-ui: 0.875rem;    /* 14 */
+  --t-ler: 0.9375rem;  /* 15 */
+  --t-sub: 1.0625rem;  /* 17 */
+  --t-titulo: 1.375rem; /* 22 */
+  --t-numero: 2.25rem; /* 36 */
+
+  /* espaço (4pt) */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px; --s-12: 48px;
+
+  /* raio */
+  --r-painel: 12px; --r-item: 10px; --r-botao: 8px; --r-tecla: 5px;
+
+  /* sombra (no escuro a profundidade vem da superfície) */
+  --sombra-cor: light-dark(oklch(0.25 0.03 266 / 0.07), oklch(0.05 0.01 266 / 0));
+  --sombra-pop-cor: light-dark(oklch(0.25 0.04 266 / 0.26), oklch(0.03 0.01 266 / 0.72));
+  --sombra-1: 0 1px 2px var(--sombra-cor);
+  --sombra-pop: 0 18px 44px -12px var(--sombra-pop-cor), 0 2px 6px var(--sombra-cor);
+  /* véu atrás de paleta, ajuda e folha; no escuro precisa ser mais fundo, senão não separa nada */
+  --veu: light-dark(oklch(0.2 0.02 266 / 0.42), oklch(0.07 0.01 266 / 0.62));
+
+  /* movimento */
+  --curva-saida: cubic-bezier(0.22, 1, 0.36, 1);
+  --curva-entrada: cubic-bezier(0.7, 0, 0.84, 0);
+  --d-rapido: 120ms;
+  --d-base: 200ms;
+  --d-lento: 320ms;
+
+  /* camadas */
+  --z-sticky: 200; --z-overlay: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+
+  /* prévia: WhatsApp */
+  --wa-wall: light-dark(#efeae2, #0b141a);
+  --wa-doodle: light-dark(rgb(0 0 0 / 0.045), rgb(255 255 255 / 0.035));
+  --wa-head: light-dark(#f0f2f5, #202c33);
+  --wa-in: light-dark(#ffffff, #202c33);
+  --wa-out: light-dark(#d9fdd3, #005c4b);
+  --wa-text: light-dark(#111b21, #e9edef);
+  --wa-meta: light-dark(#5a6a73, #8696a0);
+  --wa-out-meta: light-dark(#5a6a73, rgb(233 237 239 / 0.78));
+  --wa-quote-in: light-dark(#f5f6f6, #1d282f);
+  --wa-quote-out: light-dark(#d1f4cc, #025144);
+  --wa-link: light-dark(#02719f, #53bdeb);
+  --wa-link-out: light-dark(#02719f, #8fd6f5);
+  --wa-chip: light-dark(#ffffff, #182229);
+  --wa-chip-text: light-dark(#54656f, #8696a0);
+  --wa-doc: light-dark(#f5f6f6, #1d282f);
+  --wa-sombra-cor: light-dark(rgb(11 20 26 / 0.13), rgb(0 0 0 / 0.28));
+  --wa-sombra: 0 1px 0.5px var(--wa-sombra-cor);
+
+  /* prévia: Gmail */
+  --gm-bg: light-dark(#ffffff, #202124);
+  --gm-text: light-dark(#1f1f1f, #e3e3e3);
+  --gm-meta: light-dark(#5e5e5e, #a8abaf);
+  --gm-line: light-dark(#e3e3e3, #3c4043);
+  --gm-chip: light-dark(#f2f6fc, #2d2f31);
+  --gm-link: light-dark(#0b57d0, #a8c7fa);
+
+  /* prévia: Discord */
+  --dc-bg: light-dark(#ffffff, #313338);
+  --dc-text: light-dark(#313338, #dbdee1);
+  --dc-name: light-dark(#060607, #f2f3f5);
+  --dc-meta: light-dark(#5c5e66, #949ba4);
+  --dc-code: light-dark(#ebedef, #2b2d31);
+  --dc-quote: light-dark(#c4c9ce, #4e5058);
+  --dc-mention-bg: light-dark(#e6e8fd, #3c4270);
+  --dc-mention-fg: light-dark(#4752c4, #c9cdfb);
+  --dc-link: light-dark(#006ce7, #00a8fc);
+  --dc-head-line: light-dark(#e3e5e8, #26272b);
+}
+
+:root[data-theme='light'] { color-scheme: light; }
+:root[data-theme='dark'] { color-scheme: dark; }

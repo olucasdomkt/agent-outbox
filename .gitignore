@@ -1,0 +1,19 @@
+# dependências e build do painel: o instalar.sh refaz
+node_modules/
+web/node_modules/
+web/dist/
+
+# dados nunca entram no repositório (os de verdade moram em ~/.central-mensagens)
+*.db
+*.db-wal
+*.db-shm
+.env*
+
+# ponte do WhatsApp: o binário e a sessão, se alguém compilar ou rodar aqui dentro
+ponte/ponte-whatsapp
+ponte/ponte-whatsapp.novo
+ponte/whatsapp-client
+ponte/whatsapp-bridge
+ponte/store/
+
+.DS_Store

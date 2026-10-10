@@ -1,0 +1,20 @@
+{
+  "name": "central-mensagens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Central de Mensagens: as sessões do Claude Code enfileiram, você edita e aprova no painel, a Central envia (WhatsApp, e-mail, Discord).",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "build:web": "npm --prefix web ci && npm --prefix web run build",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0"
+  },
+  "license": "MIT"
+}
