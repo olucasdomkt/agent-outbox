@@ -16,6 +16,12 @@
   <a href="#license">License</a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/olucasdomkt/agent-outbox/actions/workflows/ci.yml"><img src="https://github.com/olucasdomkt/agent-outbox/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <img src="https://img.shields.io/badge/node-%E2%89%A520-brightgreen" alt="Node >=20">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT">
+</p>
+
 ---
 
 Autonomous agents are good at writing messages and bad at knowing which ones should actually go out. **Outbox puts a human in the loop — without the copy-paste.**
@@ -24,7 +30,7 @@ Instead of letting an LLM send on your behalf, or shuttling its drafts by hand b
 
 A built-in **linter** catches the expensive mistakes *before* anything leaves your machine: a leaked API key or password, a missing or wrong recipient, a message meant for one account sent to another, broken formatting.
 
-> Outbox is the open-source core of a tool I run every day to gate every message my Claude Code sessions send. Node + SQLite, ~290 tests, MIT.
+> Outbox is the open-source core of a tool I run every day to gate every message my Claude Code sessions send. Node + SQLite, 148 tests, MIT.
 
 ## Why
 

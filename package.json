@@ -1,11 +1,34 @@
 {
-  "name": "central-mensagens",
+  "name": "agent-outbox",
   "version": "0.1.0",
   "private": true,
-  "description": "Central de Mensagens: as sessões do Claude Code enfileiram, você edita e aprova no painel, a Central envia (WhatsApp, e-mail, Discord).",
+  "description": "An approval queue for everything your AI agents want to send — WhatsApp, email, Discord — with a linter that blocks secret leaks before they go out.",
   "type": "module",
+  "homepage": "https://github.com/olucasdomkt/agent-outbox#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olucasdomkt/agent-outbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/olucasdomkt/agent-outbox/issues"
+  },
+  "author": "Lucas Lacerda (https://github.com/olucasdomkt)",
+  "license": "MIT",
+  "keywords": [
+    "ai-agents",
+    "human-in-the-loop",
+    "approval-queue",
+    "guardrails",
+    "llm",
+    "claude",
+    "whatsapp",
+    "discord",
+    "email",
+    "cli",
+    "sqlite",
+    "outbox"
+  ],
   "scripts": {
-    "dev": "node src/server.js",
     "start": "node src/server.js",
     "build:web": "npm --prefix web ci && npm --prefix web run build",
     "test": "node --test test/"
@@ -15,6 +38,5 @@
   },
   "dependencies": {
     "better-sqlite3": "^11.10.0"
-  },
-  "license": "MIT"
+  }
 }
