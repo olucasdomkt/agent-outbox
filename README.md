@@ -24,6 +24,11 @@
 
 ---
 
+<p align="center">
+  <img src="assets/screenshot-queue.png" width="860" alt="Outbox approval queue — the linter blocking a leaked API key before it is sent">
+</p>
+<p align="center"><em>Everything your agents draft lands in one queue. Here the linter caught a leaked API key and blocked the message before it could go out.</em></p>
+
 Autonomous agents are good at writing messages and bad at knowing which ones should actually go out. **Outbox puts a human in the loop — without the copy-paste.**
 
 Instead of letting an LLM send on your behalf, or shuttling its drafts by hand between a chat window and WhatsApp, every message your agents produce lands in one local **approval inbox**. You open a web panel, read and tweak, and approve. Outbox delivers it across **WhatsApp, email and Discord**.
@@ -50,6 +55,27 @@ A built-in **linter** catches the expensive mistakes *before* anything leaves yo
    ```
 2. **You review** in the panel at `http://127.0.0.1:4912` — edit the text, fix the recipient, and see the linter's warnings inline.
 3. **You approve** — Outbox sends it (respecting a per-channel rate limit) and reports back *delivered* or *failed*.
+
+## A look inside
+
+<p align="center">
+  <img src="assets/outbox-demo.gif" width="860" alt="Outbox in action: a leaked key is blocked, a clean message is approved and delivered">
+</p>
+<p align="center"><em>A leaked key gets blocked; a clean message is approved and delivered.</em></p>
+
+Every message carries the checks it passed — no secrets, right recipient, right client, length and tone — so approving is a glance, not a re-read.
+
+<p align="center">
+  <img src="assets/screenshot-delivered.png" width="820" alt="A delivered message with every linter check green">
+</p>
+
+Keyboard-first: `⌘K` jumps to any queue and approves, edits, schedules or discards without touching the mouse. And it works on your phone — swipe right to approve, left to discard.
+
+<p align="center">
+  <img src="assets/screenshot-commands.png" width="430" alt="The command palette (Cmd+K)">
+  &nbsp;
+  <img src="assets/screenshot-mobile.png" width="210" alt="Outbox on mobile">
+</p>
 
 ## Channels
 
